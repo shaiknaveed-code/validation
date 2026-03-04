@@ -17,12 +17,12 @@ public class ValidController {
     @Autowired
     public ValidService validService;
 
-    @GetMapping
+    @GetMapping("/getall")
     public List<Valid> getall(){
         return validService.getall();
     }
 
-    @PostMapping
+    @PostMapping("/saveall")
     public List<Valid> saveall(@RequestBody List<Valid> valids){
         return validService.saveall(valids);
     }
